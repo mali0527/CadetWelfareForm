@@ -7,12 +7,11 @@
 </head>
 <body>
     <h2>Questionnaire for Assessing Cadet Welfare at the Nigeria Police Academy</h2>
-    <form id="cadetForm">
     <form action="/submit" method="POST">
         
         <h3>1. Gender:</h3>
-        <label><input type="radio" name="gender" value="Male"> Male</label>
-        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female" required> Female</label>
 
         <h3>2. Age:</h3>
         <label><input type="radio" name="age" value="18-21"> 18-21</label>
@@ -34,7 +33,7 @@
         
         <h3>5-8. Adequacy of welfare provisions</h3>
         <p>Use the scale: Very Adequate (VA), Adequate (A), Neutral (N), Inadequate (I), Very Inadequate (VI)</p>
-        <table border="1">
+        <table style="border-collapse: collapse; width: 100%;" border="1">
             <tr>
                 <th>Item</th>
                 <th>VA</th>
@@ -86,6 +85,7 @@
         
         <h3>18-20. Overall Experience</h3>
         <p>Use the scale: Strongly Agree (SA), Agree (A), Neutral (N), Disagree (D), Strongly Disagree (SD)</p>
+        
         <label>Do welfare challenges reduce motivation?<br>
             <input type="radio" name="motivation" value="SA"> SA
             <input type="radio" name="motivation" value="A"> A
