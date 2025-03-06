@@ -1,116 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadet Welfare Assessment Questionnaire</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadet Welfare Assessment Questionnaire</title>
+  <style>
+    /* Optional CSS styling */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+  </style>
 </head>
 <body>
-    <h2>Questionnaire for Assessing Cadet Welfare at the Nigeria Police Academy</h2>
-    <form action="/submit" method="POST">
-        
-        <h3>1. Gender:</h3>
-        <label><input type="radio" name="gender" value="Male" required> Male</label>
-        <label><input type="radio" name="gender" value="Female" required> Female</label>
+  <h2>Questionnaire for Assessing Cadet Welfare at the Nigeria Police Academy</h2>
+  
+  <!-- Removed action and method so that JavaScript can handle submission -->
+  <form id="cadetForm">
+    <!-- Gender -->
+    <h3>1. Gender:</h3>
+    <label><input type="radio" name="gender" value="Male" required> Male</label>
+    <label><input type="radio" name="gender" value="Female" required> Female</label>
 
-        <h3>2. Age:</h3>
-        <label><input type="radio" name="age" value="18-21"> 18-21</label>
-        <label><input type="radio" name="age" value="22-25"> 22-25</label>
-        <label><input type="radio" name="age" value="26-29"> 26-29</label>
-        <label><input type="radio" name="age" value="30+"> 30+</label>
-        
-        <h3>3. Academic Year/Level:</h3>
-        <label><input type="radio" name="level" value="200"> 200 Level</label>
-        <label><input type="radio" name="level" value="300"> 300 Level</label>
-        <label><input type="radio" name="level" value="400"> 400 Level</label>
-        <label><input type="radio" name="level" value="500"> 500 Level</label>
-        
-        <h3>4. Which welfare provisions are available to you? (Select all that apply)</h3>
-        <label><input type="checkbox" name="welfare[]" value="Accommodation"> Accommodation</label>
-        <label><input type="checkbox" name="welfare[]" value="Healthcare"> Healthcare service</label>
-        <label><input type="checkbox" name="welfare[]" value="Feeding"> Feeding service</label>
-        <label><input type="checkbox" name="welfare[]" value="Financial Support"> Financial support</label>
-        
-        <h3>5-8. Adequacy of welfare provisions</h3>
-        <p>Use the scale: Very Adequate (VA), Adequate (A), Neutral (N), Inadequate (I), Very Inadequate (VI)</p>
-        <table style="border-collapse: collapse; width: 100%;" border="1">
-            <tr>
-                <th>Item</th>
-                <th>VA</th>
-                <th>A</th>
-                <th>N</th>
-                <th>I</th>
-                <th>VI</th>
-            </tr>
-            <tr>
-                <td>Accommodation</td>
-                <td><input type="radio" name="accommodation" value="VA"></td>
-                <td><input type="radio" name="accommodation" value="A"></td>
-                <td><input type="radio" name="accommodation" value="N"></td>
-                <td><input type="radio" name="accommodation" value="I"></td>
-                <td><input type="radio" name="accommodation" value="VI"></td>
-            </tr>
-            <tr>
-                <td>Healthcare</td>
-                <td><input type="radio" name="healthcare" value="VA"></td>
-                <td><input type="radio" name="healthcare" value="A"></td>
-                <td><input type="radio" name="healthcare" value="N"></td>
-                <td><input type="radio" name="healthcare" value="I"></td>
-                <td><input type="radio" name="healthcare" value="VI"></td>
-            </tr>
-            <tr>
-                <td>Feeding Service</td>
-                <td><input type="radio" name="feeding" value="VA"></td>
-                <td><input type="radio" name="feeding" value="A"></td>
-                <td><input type="radio" name="feeding" value="N"></td>
-                <td><input type="radio" name="feeding" value="I"></td>
-                <td><input type="radio" name="feeding" value="VI"></td>
-            </tr>
-            <tr>
-                <td>Financial Support</td>
-                <td><input type="radio" name="financial" value="VA"></td>
-                <td><input type="radio" name="financial" value="A"></td>
-                <td><input type="radio" name="financial" value="N"></td>
-                <td><input type="radio" name="financial" value="I"></td>
-                <td><input type="radio" name="financial" value="VI"></td>
-            </tr>
-        </table>
-        
-        <h3>17. What specific welfare challenges have you faced? (Select all that apply)</h3>
-        <label><input type="checkbox" name="challenges[]" value="Poor accommodation"> Poor accommodation</label>
-        <label><input type="checkbox" name="challenges[]" value="Inadequate feeding service"> Inadequate feeding service</label>
-        <label><input type="checkbox" name="challenges[]" value="Inadequate healthcare service"> Inadequate healthcare service</label>
-        <label><input type="checkbox" name="challenges[]" value="Insufficient financial support"> Insufficient financial support</label>
-        <label><input type="checkbox" name="challenges[]" value="Inadequate training equipment"> Inadequate training equipment</label>
-        
-        <h3>18-20. Overall Experience</h3>
-        <p>Use the scale: Strongly Agree (SA), Agree (A), Neutral (N), Disagree (D), Strongly Disagree (SD)</p>
-        
-        <label>Do welfare challenges reduce motivation?<br>
-            <input type="radio" name="motivation" value="SA"> SA
-            <input type="radio" name="motivation" value="A"> A
-            <input type="radio" name="motivation" value="N"> N
-            <input type="radio" name="motivation" value="D"> D
-            <input type="radio" name="motivation" value="SD"> SD
-        </label><br>
-        
-        <label>Do you love going for activities and classes despite challenges?<br>
-            <input type="radio" name="activities" value="SA"> SA
-            <input type="radio" name="activities" value="A"> A
-            <input type="radio" name="activities" value="N"> N
-            <input type="radio" name="activities" value="D"> D
-            <input type="radio" name="activities" value="SD"> SD
-        </label><br>
-        
-        <label>Overall, are you satisfied with your academic and training welfare experiences?<br>
-            <input type="radio" name="satisfaction" value="SA"> SA
-            <input type="radio" name="satisfaction" value="A"> A
-            <input type="radio" name="satisfaction" value="N"> N
-            <input type="radio" name="satisfaction" value="D"> D
-            <input type="radio" name="satisfaction" value="SD"> SD
-        </label><br>
-        
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html>
+    <!-- Age -->
+    <h3>2. Age:</h3>
+    <label><input type="radio" name="age" value="18-21"> 18-21</label>
+    <label><input type="radio" name="age" value="22-25"> 22-25</label>
+    <label><input type="radio" name="age" value="26-29"> 26-29</label>
+    <label><input type="radio" name="age" value="30+"> 30+</label>
+    
+    <!-- Academic Year/Level -->
+    <h3>3. Academic Year/Level:</h3>
+    <label><input type="radio" name="level" value="200"> 200 Level</label>
+    <label><input type="radio" name="level" value="300"> 300 Level</label>
+    <label><input type="radio" name="level" value="400"> 400 Level</label>
+    <label><input type="radio" name="level" value="500"> 500 Level</label>
+    
+    <!-- Welfare provisions -->
+    <h3>4. Which welfare provisions are available to you? (Select all that apply)</h3>
+    <!-- Using "welfare[]" so that a backend can process multiple values -->
+    <label><input type="checkbox" name="welfare[]" value="Accommodation"> Accommodation</label>
+    <label><input type="checkbox" name="welfare[]" value="Healthcare"> Healthcare service</label>
+    <label><input type="checkbox" name="welfare[]" value="Feeding"> Feeding service</label>
+    <label><input type="checkbox" name="welfare[]" value="Financial Support"> Financial support</label>
+    
+    <!-- Adequacy of welfare provisions -->
+    <h3>5-8. Adequacy of welfare provisions</h3>
+    <p>Use the scale: Very Adequate (VA), Adequate (A), Neutral (N), Inadequate (I), Very Inadequate (VI)</p>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>VA</th>
+        <th>A</th>
+        <th>N</th>
+        <th>I</th>
+        <th>VI</th>
+      </tr>
+      <tr>
+        <td>Accommodation</td>
+        <td><input type="radio" name="accommodation" value="VA"></td>
+        <td><input type="radio" name="accommodation" value="A"></td>
+        <td><input type="radio" name="accommodation" value="N"></td>
+        <td><input type="radio" name="accommodation" value="I"></td>
+        <td><input type="radio" name="accommodation" value="VI"></td>
+      </tr>
+      <tr>
+        <td>Healthcare</td>
+        <td><input type="radio" name="healthcare" value="VA"></td>
+        <td><input type="radio" name="healthcare" value="A"></td>
+        <td><input type="radio" name="healthcare" value="N"></td>
+        <td><input type="radio" name="healthcare" value="I"></td>
+        <td><input type="radio" name="healthcare" value="VI"></td>
+      </tr>
+      <tr>
+        <td>Feeding Service</td>
+        <td><input type="radio" name="feeding" value="VA"></td>
+        <td><input type="radio" name="feeding" value="A"></td>
+        <td><input type="radio" name="feeding" value="N"></td>
+        <td><input type="radio" name="feeding" value="I"></td>
+        <td><input type="radio" name="feeding" value="VI"></td>
+      </tr>
+      <tr>
+        <td>Financial Support</td>
+        <td><input type="radio" name="financial" value="VA"></td>
+        <td><input type="radio" name="financial" value="A"></td>
+        <td><input type="radio" name="financial" value="N"></td>
+        <td><input type="radio" name="financial" value="I"></td>
+        <td><input type="radio" name="financial" value="VI"></td>
+      </tr>
+    </table>
+    
+    <!-- Welfare challenges -->
+    <h3>17. What specific welfare challenges have you faced? (Select all that apply)</h3>
+    <label><input type="checkbox" name="challenges[]" value="Poor accommodation"> Poor accommodation</label>
+    <label><input type="checkbox" name="challenges[]" value="Inadequate feeding service"> Inadequate feeding service</label>
+    <label><input type="checkbox" name="challenges[]" value="Inadequate healthcare service"> Inadequate healthcare service</label>
+    <label><input type="checkbox" name="challenges[]" value="Insufficient financial support"> Insufficient financial support</label>
+    <label><input type="checkbox" name="challenges[]" value="Inadequate training equipment"> Inadequate training equipment</label>
+    
+    <!-- Overall Experience -->
+    <h3>18-20. Overall Experience</h3>
+    <p>Use the scale: Strongly Agree (SA), Agree (A), Neutral (N), Disagree (D), Strongly Disagree (SD)</p>
+    
+    <label>Do welfare challenges reduce motivation?<br>
+      <input type="radio" name="motivation" value="SA"> SA
+      <input type="radio" name="motivation" value="A"> A
+      <input type="radio" name="motivation" value="N"> N
+      <input type="radio" name="motivation" value="D"> D
+      <input type="radio" name="motivation" value="SD"> SD
+    </label>
+    <br>
+    
+    <label>Do you love going for activities and classes despite challenges?<br>
+      <input type="radio" name="activities" value="SA"> SA
+ 
